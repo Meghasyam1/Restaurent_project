@@ -51,6 +51,77 @@ body{
     padding: 0.6rem;
     font-size: 2.5rem; 
 }
+/* Menu for the restaurent */
+.flip_card{
+    position: relative;
+    transform-style: preserve-3d;
+    height: 450px;
+    width: 280px;
+}
+.front{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    flex-direction: column;
+    box-shadow: 7px 7px black;
+}
+.front p{
+    padding: 0.6rem;
+    backface-visibility: hidden;
+}
+.front img{
+
+    height: 240px;
+    width: 240px;
+    border-radius: 40%;
+    filter: drop-shadow(5px 5px 10px  black);
+    display: block;
+}
+.back, .front{
+    position: absolute;
+    backface-visibility: hidden;
+}
+.back{
+    transform: rotateY(180deg);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    flex-direction: column;
+    box-shadow: 7px 7px black;
+}
+.back img{
+    height: 50%;
+    width: 50%;
+    margin: auto;
+}
+.back p{
+    position: absolute;
+    bottom: 50px;
+}
+.rotate{
+    animation: rotation infinite 20s linear;
+}
+.flipcard_main:hover .flip_card{
+    transform: rotateY(180deg);
+}
+@keyframes rotation{
+    from{
+        transform: rotatez(0deg);
+    }
+    to{
+        transform: rotatez(360deg);
+    }
+}
+.menu {
+    display:flex;
+    justify-content: space-around;
+    padding: 0.6rem;
+    flex-wrap: wrap;
+}
 @media(max-width:480px){
 .nav {
     display: flex;
@@ -107,10 +178,10 @@ body{
         justify-content: space-around;
     }
     .icon_button{
-        height: 50vh;
+        /* height: 50vh; */
+        row-gap: 0.5rem;
         width: 100vw;
         display: flex;
         flex-direction: column;
-        row-gap: 0.5rem;
     }
 }
