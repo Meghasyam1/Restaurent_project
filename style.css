@@ -16,30 +16,9 @@ body{
     width: 100%;
     background: url("./photos/background.png");
     background-size: cover;
+    height: 10vh;
 }
-.nav {
-    display: flex;
-    list-style:none;
-    justify-content: space-around;
-    width: 100%;
-    margin-top: 1rem;
-}
-.lower h1{
-    padding: 0.6rem;
-    font-size: 2.5rem;
-    font-style: bold;   
-}
-.lower p{
-    font-size: 25px;
-    padding: 1rem;
-}
-.lower img{
-
-    height: 50vh;
-    width: 100%;
-    border-radius: 0.2rem;
-}
-.lower button{
+.fbutton {
     margin-left: 0.5rem;
     height: 3rem;
     width: 9rem;
@@ -48,19 +27,90 @@ body{
     border-radius: 5px;
     background-image:  linear-gradient(to right,#f7e79d,white);
 }
-.icons{
-    margin-top: 0.5rem;
-    padding: 0.5rem;
-}
 .icon_img img{
     height: 4rem;
     width: 4rem;
-}
-.icon_img p{
-    margin-left:0.5rem;
 }
 .icon_img{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.icon_img p{
+    margin-left:0.5rem;
+}
+.lower_head{
+    container-type: inline-size;
+}
+.lower_head p{
+    font-size: 5cqi;
+    padding: 0.5rem;
+}
+.lower h1{
+    text-align: center;
+    padding: 0.6rem;
+    font-size: 2.5rem; 
+}
+@media(max-width:480px){
+.nav {
+    display: flex;
+    list-style:none;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.lower_img{
+
+    height: 50vh;
+    width: 100%;
+    background: url("./photos/chicken_biryani.jpg");
+    background-size: cover;
+    background-position: center center;
+    border-radius: 10px;
+    background-clip: content-box;
+    background-size: cover;
+    padding: 10px;
+}
+.icons{
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+}
+
+}
+/* For desktops */
+@media (min-width:481px){
+    .nav{
+        width: 100%;
+        display: flex;
+        justify-content:space-around;
+    }
+    .lower{
+        display: flex;
+        height: 70vh;
+        padding: 1rem;
+    }
+    .lower_head{
+        width: 100%;
+    }
+    
+    .lower_img{
+        width: 100%;
+        background: url("./photos/chicken_biryani.jpg");
+        background-size: cover;
+        background-position: center center;
+        box-shadow: 8px 8px black;
+        border-radius: 10px;
+    }
+    .icons{
+        display: flex;
+        justify-content: space-around;
+    }
+    .icon_button{
+        height: 50vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.5rem;
+    }
 }
