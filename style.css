@@ -14,7 +14,8 @@ body{
     position: sticky;
     top: 0;
     width: 100%;
-    background: url("./photos/background.png");
+    /* background: url("./photos/background.png"); */
+    background-image: linear-gradient(to right,#f7e79d,white);
     background-size: cover;
     height: 10vh;
 }
@@ -55,8 +56,10 @@ body{
 .flip_card{
     position: relative;
     transform-style: preserve-3d;
+    transition: transform 0.6s;
     height: 450px;
     width: 280px;
+
 }
 .front{
     height: 100%;
@@ -94,13 +97,14 @@ body{
     box-shadow: 7px 7px black;
 }
 .back img{
-    height: 50%;
-    width: 50%;
+    width: 70%;
+    height: auto;
     margin: auto;
 }
 .back p{
     position: absolute;
     bottom: 50px;
+    margin-left: 0.5rem;
 }
 .rotate{
     animation: rotation infinite 20s linear;
@@ -121,6 +125,42 @@ body{
     justify-content: space-around;
     padding: 0.6rem;
     flex-wrap: wrap;
+}
+/* Last section styling */
+.subscribe input,button{
+    display: block;
+}
+.subscribe{
+    display: flex;
+    flex-direction: column;
+}
+.subscribe input{
+    width: 80vw;
+    height: 40px;
+    border-radius: 10px;
+    margin-left: 0.5rem;
+    box-shadow: 2px 2px gray;
+}
+.last_sec{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.f_img img{
+    display: block;
+    height: 40px;
+    width: 40px;
+    margin: auto;
+}
+.f_img{
+    display: flex;
 }
 @media(max-width:480px){
 .nav {
@@ -147,7 +187,33 @@ body{
     margin-top: 0.5rem;
     padding: 0.5rem;
 }
-
+.chooseus{
+row-gap: 0.5rem;
+padding: 0.5rem;
+}
+/* last section styling */
+.subscribe input,button{
+    display: block;
+}
+.subscribe{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+    padding: 0.8rem;
+}
+.subscribe input{
+    width: 80vw;
+    height: 40px;
+    border-radius: 10px;
+    margin-left: 0.5rem;
+}
+/* Footer styling */
+.f_lower{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    margin-bottom: 1rem;
+}
 }
 /* For desktops */
 @media (min-width:481px){
@@ -176,6 +242,7 @@ body{
     .icons{
         display: flex;
         justify-content: space-around;
+        width: 70vw;
     }
     .icon_button{
         /* height: 50vh; */
@@ -184,4 +251,65 @@ body{
         display: flex;
         flex-direction: column;
     }
+    .chooseus{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .chooseus h2{
+        margin-left: 0.5rem;
+        text-align: center;
+        margin-bottom: 2rem;    
+    }
+    /* last section styling */
+    .last_sec{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .subscribe{
+        width: 40vw;
+        row-gap: 1rem;
+    }
+    .subscribe input{
+      width: 60%  
+    }
+    .footer{
+        row-gap: 0.5rem;
+        height: 40vh;
+        bottom: -70px;
+    }
+    .fhead{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 0.rem;
+        padding: 0.5rem;
+    }
+    .f_lower{
+        display: grid;
+        width: 25vw;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .f_img{
+        margin-top: 0.5rem;
+    }
+}
+/* Button Hover Styling */
+.fbutton:hover{
+    background-image: linear-gradient(to right,black,gray);
+    color: white;
+}
+.nav h4:hover{
+    text-decoration: underline;
+}
+.about h3:hover{
+    text-decoration: underline;
+}
+.about p:hover{
+    text-decoration: underline;
 }
